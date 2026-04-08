@@ -186,52 +186,7 @@
   </button>
 
   <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+
 
   <main id="main-content">
   <section class="hero">
@@ -282,15 +237,15 @@
                 </span>
 
                 <!-- TODO: Update with arXiv paper ID -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
-              </span>
+                </a> -->
+              <!-- </span> -->
             </div>
           </div>
         </div>
@@ -306,9 +261,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Vision-language models (VLMs) are increasingly deployed in autonomous driving (AD) systems, creating an urgent need for rigorous safety evaluation under rare yet safety-critical scenarios. Among these, interactions with vulnerable road users (VRUs), such as pedestrians, represent a major source of real-world failures. However, existing safety-critical scenario generation methods predominantly rely on simulator-based pipelines, which suffer from a substantial sim-to-real gap and often fail to capture realistic, diverse, and unforeseen human–vehicle interaction dynamics. To address this, we present <b>SafeGen</b>, a goal-conditioned diffusion framework for safety-critical scenario generation in vision-language model-based autonomous driving systems (VLMADs). Our key insight is to formulate scenario generation as a goal-conditioned diffusion process, where a predefined catastrophic end-state (e.g., a collision with a pedestrian) serves as a strong supervisory signal, guiding the generation of temporally coherent video trajectories that naturally evolve toward safety-critical outcomes. Building on this formulation, we introduce <b><i>Context Grounded End State Reasoning</i></b>, which leverages VLMs to analyze benign driving contexts and infer latent vulnerabilities in human–vehicle interactions, producing structured end-state specifications that induce high-risk scenarios. Conditioned on these targets, we further propose <b><i>End State Conditioned Video Evolution</i></b>, which grounds semantic threats into physically plausible visual dynamics. Specifically, we instantiate high-risk agents (e.g., VRUs) within the scene via depth-aware geometric projection, followed by boundary-conditioned diffusion to generate intermediate frames with consistent motion patterns and temporal coherence. Extensive experiments across 3 VLMADs demonstrate that <b>SafeGen</b> increases the Judge Overall Score by <b><span style="color: red;">24.25%</span></b> on average compared to SoTA baselines. Furthermore, fine-tuning a VLMAD with SafeGen-generated data improves performance in real-world driving scenes by an average of <b><span style="color: rgb(209, 66, 66);">15.9%</span></b>.
+            Vision-language models (VLMs) are increasingly deployed in autonomous driving (AD) systems, creating an urgent need for rigorous safety evaluation under rare yet safety-critical scenarios. Among these, interactions with vulnerable road users (VRUs), such as pedestrians, represent a major source of real-world failures. However, existing safety-critical scenario generation methods predominantly rely on simulator-based pipelines, which suffer from a substantial sim-to-real gap and often fail to capture realistic, diverse, and unforeseen human–vehicle interaction dynamics. To address this, we present <b>SafeGen</b>, a goal-conditioned diffusion framework for safety-critical scenario generation in vision-language model-based autonomous driving systems (VLMADs). Our key insight is to formulate scenario generation as a goal-conditioned diffusion process, where a predefined catastrophic end-state (e.g., a collision with a pedestrian) serves as a strong supervisory signal, guiding the generation of temporally coherent video trajectories that naturally evolve toward safety-critical outcomes. Building on this formulation, we introduce <b><i>Context Grounded End State Reasoning</i></b>, which leverages VLMs to analyze benign driving contexts and infer latent vulnerabilities in human–vehicle interactions, producing structured end-state specifications that induce high-risk scenarios. Conditioned on these targets, we further propose <b><i>End State Conditioned Video Evolution</i></b>, which grounds semantic threats into physically plausible visual dynamics. Specifically, we instantiate high-risk agents (e.g., VRUs) within the scene via depth-aware geometric projection, followed by boundary-conditioned diffusion to generate intermediate frames with consistent motion patterns and temporal coherence. Extensive experiments across 3 VLMADs demonstrate that <b>SafeGen</b> increases the Judge Overall Score by <b><span style="color: red;">24.25%</span></b> on average compared to SoTA baselines. Furthermore, fine-tuning a VLMAD with SafeGen-generated data improves performance in real-world driving scenes by an average of <b><span style="color: red;">15.9%</span></b>.
           </p>
         </div>
       </div>
@@ -321,15 +275,19 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop"> <div class="columns is-centered">
-        <div class="column is-full">
-          
-          <div class="has-text-centered">
-            <img src="static/images/methodology_overview.png" alt="Research result visualization" style="width: 100%; height: auto; border-radius: 10px;">
-            
-            <h2 class="subtitle has-text-centered mt-4">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Methodology Overview</h2> 
+      
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-image">
+            <img src="static/images/methodology_overview.png" alt="Methodology overview" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          </div>
+
+          <div class="content has-text-justified mt-5">
+            <p>
               SafeGen leverages a two-stage pipeline to transform benign driving videos into safety-critical scenarios: it first uses a VLM with Set-of-Mark and depth information to reason out a catastrophic "end-state", then employs a diffusion framework to synthesize high-fidelity adversarial agents and a temporally coherent video trajectory that evolves naturally toward the specified accident.
-            </h2>
+            </p>
           </div>
 
         </div>
@@ -339,27 +297,40 @@
 </section>
 <!-- End image carousel -->
 
+<!-- video -->
+<section class="section hero is-light"> 
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered"> 
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generated Video Example</h2>
+          <div class="publication-video">
+            <video controls autoplay muted loop playsinline 
+                  style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%;">
+                <source src="./assets/video/demo.mp4" type="video/mp4">
+            </video>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-
-<section class="hero is-small is-light">
-  <div class="hero-body">
+<!-- picture -->
+<section class="hero is-small"> <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Experiments Results Overview</h2> 
+      <h2 class="title is-3 has-text-centered">Diverse Scenario Synthesis</h2> 
       
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
           <div class="publication-image">
-            <img src="static/images/experimental_results.png" alt="Description of the method" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="static/images/visualization.png" alt="Description of the method" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
           </div>
 
           <div class="content has-text-justified mt-5">
             <p>
-              Main results on the adversarial efficacy for different VLMADs. We report the Judge Overall Score (JOS) along with its sub-metrics. We also report the change in performance (Δ) relative to the baseline. The SafeGen columns are shaded in gray. Improvements and degradations are highlighted in red and blue, respectively.
+              A comparative visualization of our method's ability to generate diverse safety-critical pedestrian trajectories for autonomous driving evaluation. Moving from left to right, each row presents a temporal progression shaped by specific contextual constraints and goal-states, ranging from varying traffic rules (left/right-hand) and weather (rainy) to unique zones (construction). Our approach, i.e., SafeGen, showcases its effectiveness in synthesizing realistic, goal-directed interactions.
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -368,7 +339,7 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
@@ -385,7 +356,7 @@
   url={https://anonymous.4open.science/r/SafeGen-0FB6}
 }</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
